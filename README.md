@@ -4,7 +4,6 @@ Description
 
 ### Tech
 
-Bubble Sort Service uses a number of open source projects to work properly:
 * [node.js] - evented I/O for the backend
 * [eslint](https://eslint.org/) - The pluggable linting utility for JavaScript and JSX
 * [husky](https://www.npmjs.com/package/husky) - Git hooks made easy
