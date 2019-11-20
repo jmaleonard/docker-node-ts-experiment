@@ -17,8 +17,8 @@ const writeFile = async (jsonData, fileName) => {
 
 (async () => {
   log.info({}, `Pausing ${TIMEOUT} seconds for the database to startup`);
-  await wait(TIMEOUT * 100); // this is here to setup your local postgress
-  await syncTables(true, 'Files'); // set to true to remove data on startup
+  await wait(300 * 100); // this is here to setup your local postgress
+  await syncTables(false, 'fileAnalysis'); // set to true to remove data on startup
 })();
 
 async function wait(ms) {

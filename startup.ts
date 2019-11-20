@@ -1,6 +1,6 @@
 'use strict';
 
-const bunyan = require('bunyan');
+import bunyan from "bunyan";
 var log = bunyan.createLogger({ name: "startup" });
 const { sequelize } = require('./src/postgres/models');
 const { Client } = require('pg');
@@ -15,7 +15,8 @@ const createDB = async (dbName) => {
   await client.connect();
   try {
     log.info({}, "Trying to create database");
-    await client.query(`CREATE DATABASE ${dbName};`);
+    await client.query(`CREATE DATABASE fileAnalysis;`);
+    log.info({}, "DATABASE CREATED");
   } catch (e) {
     log.info({}, "DATABASE EXISTS");
     return Promise.resolve();
